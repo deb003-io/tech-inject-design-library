@@ -1,0 +1,22 @@
+:root {
+  --ti-primary: #1a73e8; --ti-text: #1a1a1a; --ti-muted: #6b7280;
+  --ti-border: #e5e7eb; --ti-font: 'Inter', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--ti-font); color: var(--ti-text); background: #fff; }
+:focus-visible { outline: 2px solid var(--ti-primary); outline-offset: 2px; }
+.ti-shell { max-width: 1080px; margin: 0 auto; padding: 1rem; }
+.ti-nav { display: flex; gap: 1rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--ti-border); margin-bottom: 1.5rem; flex-wrap: wrap; }
+.ti-nav a { text-decoration: none; color: var(--ti-text); font-weight: 500; font-size: 0.875rem; }
+.ti-btn { font-family: var(--ti-font); display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 1rem; border: 1px solid transparent; cursor: pointer; background: var(--ti-primary); color: #fff; }
+.ti-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.ti-btn-secondary { background: #fff; color: var(--ti-text); border-color: var(--ti-border); }
+.ti-input, .ti-textarea { font-family: var(--ti-font); width: 100%; border: 1px solid var(--ti-border); border-radius: 8px; padding: 0.5rem 0.75rem; font-size: 0.875rem; }
+.ti-textarea { min-height: 320px; font-family: ui-monospace, monospace; font-size: 0.78rem; }
+.ti-label { font-size: 0.875rem; font-weight: 500; display: block; margin: 0.75rem 0 0.375rem; }
+.ti-error { border: 1px solid #fad2cf; background: #fce8e6; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.875rem; }
+.ti-ok { border: 1px solid #ceead6; background: #e6f4ea; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.875rem; }
+.ti-row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+table.ti-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+table.ti-table th { text-align: left; font-size: 0.75rem; text-transform: uppercase; color: var(--ti-muted); padding: 0.5rem; border-bottom: 1px solid var(--ti-border); }
+table.ti-table td { padding: 0.5rem; border-bottom: 1px solid #f3f4f6; }

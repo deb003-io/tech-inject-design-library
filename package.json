@@ -1,0 +1,21 @@
+{
+  "name": "tech-inject-design-library",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=@tech-inject/backend",
+    "dev:catalogue": "npm run dev --workspace=@tech-inject/catalogue",
+    "dev:admin": "npm run dev --workspace=@tech-inject/admin",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.4.5"
+  }
+}

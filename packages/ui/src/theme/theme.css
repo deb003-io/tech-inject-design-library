@@ -1,0 +1,69 @@
+:root {
+  --ti-primary: #1a73e8;
+  --ti-primary-hover: #1557b0;
+  --ti-primary-active: #0f3f82;
+  --ti-secondary: #34a853;
+  --ti-bg: #ffffff;
+  --ti-surface: #f8f9fa;
+  --ti-border: #e5e7eb;
+  --ti-text: #1a1a1a;
+  --ti-muted: #6b7280;
+  --ti-error: #d93025;
+  --ti-radius-md: 8px;
+  --ti-font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.ti-btn {
+  font-family: var(--ti-font);
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  border-radius: var(--ti-radius-md);
+  font-size: 0.875rem; font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+.ti-btn:focus-visible { outline: 2px solid var(--ti-primary); outline-offset: 2px; }
+.ti-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.ti-btn-primary { background: var(--ti-primary); color: #fff; }
+.ti-btn-primary:hover:not(:disabled) { background: var(--ti-primary-hover); }
+.ti-btn-primary:active:not(:disabled) { background: var(--ti-primary-active); }
+.ti-btn-secondary { background: #fff; color: var(--ti-text); border-color: var(--ti-border); }
+.ti-btn-secondary:hover:not(:disabled) { background: #f3f4f6; }
+.ti-btn-ghost { background: transparent; color: var(--ti-text); }
+.ti-btn-ghost:hover:not(:disabled) { background: #f3f4f6; }
+.ti-btn-danger { background: var(--ti-error); color: #fff; }
+.ti-btn-sm { padding: 0.25rem 0.625rem; font-size: 0.75rem; }
+.ti-btn-lg { padding: 0.75rem 1.5rem; font-size: 1rem; }
+
+.ti-input { font-family: var(--ti-font); width: 100%; border: 1px solid var(--ti-border); border-radius: var(--ti-radius-md); padding: 0.5rem 0.75rem; font-size: 0.875rem; background: #fff; color: var(--ti-text); }
+.ti-input::placeholder { color: #9ca3af; }
+.ti-input:hover:not(:disabled) { border-color: #d1d5db; }
+.ti-input:focus { outline: 2px solid var(--ti-primary); outline-offset: 0; border-color: var(--ti-primary); }
+.ti-input:disabled { background: #f3f4f6; opacity: 0.7; }
+.ti-label { font-family: var(--ti-font); font-size: 0.875rem; font-weight: 500; color: var(--ti-text); display: block; margin-bottom: 0.375rem; }
+
+.ti-card { font-family: var(--ti-font); background: #fff; border: 1px solid var(--ti-border); border-radius: 12px; box-shadow: 0 1px 2px rgba(16,24,40,.06); }
+.ti-card-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--ti-border); font-weight: 600; }
+.ti-card-body { padding: 1.25rem; }
+.ti-card-footer { padding: 0.75rem 1.25rem; border-top: 1px solid var(--ti-border); font-size: 0.75rem; color: var(--ti-muted); }
+
+.ti-badge { font-family: var(--ti-font); display: inline-flex; align-items: center; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; padding: 0.125rem 0.625rem; border: 1px solid transparent; }
+.ti-badge-neutral { background: #f3f4f6; color: #374151; border-color: #e5e7eb; }
+.ti-badge-success { background: #e6f4ea; color: #188038; border-color: #ceead6; }
+.ti-badge-warning { background: #fef7e0; color: #e37400; border-color: #fde293; }
+.ti-badge-error { background: #fce8e6; color: #d93025; border-color: #fad2cf; }
+.ti-badge-info { background: #e8f0fe; color: #1a73e8; border-color: #d2e3fc; }
+
+.ti-stat { font-family: var(--ti-font); background: #fff; border: 1px solid var(--ti-border); border-radius: 12px; padding: 1rem 1.25rem; }
+.ti-stat-label { font-size: 0.75rem; color: var(--ti-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+.ti-stat-value { font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem; }
+.ti-stat-delta-up { color: #188038; font-size: 0.75rem; font-weight: 500; }
+.ti-stat-delta-down { color: #d93025; font-size: 0.75rem; font-weight: 500; }
+
+.ti-table { font-family: var(--ti-font); width: 100%; border-collapse: collapse; font-size: 0.875rem; background: #fff; }
+.ti-table th { text-align: left; font-weight: 600; color: var(--ti-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.625rem 1rem; border-bottom: 1px solid var(--ti-border); background: #f9fafb; }
+.ti-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; color: var(--ti-text); }
+.ti-table tbody tr:hover { background: #f9fafb; }
+.ti-table tr[aria-selected="true"] { background: #e8f0fe; }
+.ti-table tbody tr:focus-visible { outline: 2px solid var(--ti-primary); outline-offset: -2px; }
