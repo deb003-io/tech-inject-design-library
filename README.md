@@ -13,11 +13,14 @@ Built AI-assisted in a TurboRepo monorepo.
 | Backend API (local) | http://localhost:4000/api |
 | Catalogue (deployed) | TBD — set `NEXT_PUBLIC_API_URL` then deploy `packages/catalogue` (see Deployment) |
 | Admin (deployed) | TBD — same backend, deploy `packages/admin` |
-| Backend (deployed) | TBD — deploy `packages/backend` with `DATABASE_PATH` on persistent disk |
+| Backend (deployed) | https://tech-inject-backend.onrender.com/api |
 
-> Honesty note: this environment could not publish to public hosting, so no deployed
-> URLs are claimed. Everything below was verified locally against a live server
-> (see Verification); deployment is a documented operator step.
+> Honesty note: the backend is deployed on Render's free tier, so `DATABASE_PATH`
+> points at instance-local storage (`/tmp`) — the database reseeds on every
+> redeploy/restart rather than persisting across them (Render disks require a paid
+> plan). Catalogue and Admin deployment to Vercel with `NEXT_PUBLIC_API_URL` is a
+> documented operator step; everything else was verified locally and against the
+> live backend (see Verification).
 
 ## Monorepo layout
 
